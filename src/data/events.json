@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Daily Standup",
+    "date": "2025-11-07",
+    "startTime": "09:00",
+    "endTime": "09:15",
+    "color": "#1e90ff"
+  },
+  {
+    "id": 2,
+    "title": "Weekly catchup",
+    "date": "2025-11-07",
+    "startTime": "16:30",
+    "endTime": "19:30",
+    "color": "#f6501e"
+  },
+  {
+    "id": 3,
+    "title": "Project Review",
+    "date": "2025-11-10",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "color": "#10b981"
+  }
+]
