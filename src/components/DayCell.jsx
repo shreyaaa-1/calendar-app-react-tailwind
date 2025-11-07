@@ -9,7 +9,7 @@ export default function DayCell({ day, isToday, events = [] }) {
   const remaining = events.length - visible.length;
 
   return (
-    <div className={`p-2 h-28 min-w-0 border border-transparent hover:bg-gray-50 ${isToday ? 'ring-2 ring-indigo-300 rounded-md' : ''}`}>
+    <div className={`p-2 h-28 w-full min-w-0 border border-transparent hover:bg-gray-50 ${isToday ? 'ring-2 ring-indigo-300 rounded-md' : ''}`}>
       <div className="flex justify-between items-start">
         <div className="text-sm font-medium">{day.getDate()}</div>
       </div>

@@ -52,7 +52,7 @@ export default function Calendar() {
   function nextMonth() { setCurrentMonth(addMonths(currentMonth, 1)); }
 
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-white rounded-lg shadow-sm">
+    <div className="max-w-5xl w-full mx-auto p-6 bg-white rounded-lg shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <div>
           <div className="text-lg font-semibold">{format(currentMonth, 'MMMM yyyy')}</div>
@@ -69,15 +69,16 @@ export default function Calendar() {
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1 mt-2">
+      <div className="grid grid-cols-7 gap-1 mt-2 w-full">
         {grid.map((day, idx) => {
           const iso = format(day, 'yyyy-MM-dd');
           const list = eventsByDate[iso] || [];
           const isToday = isSameDay(day, new Date());
           const inMonth = isSameMonth(day, currentMonth);
 
+          // Add w-full here so each cell occupies the full fraction and doesn't shrink
           return (
-            <div key={idx} className={`${inMonth ? 'bg-white' : 'bg-gray-50 text-gray-400'}`}>
+            <div key={idx} className={`${inMonth ? 'bg-white' : 'bg-gray-50 text-gray-400'} w-full`}>
               <DayCell day={day} isToday={isToday} events={list} />
             </div>
           );
